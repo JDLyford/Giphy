@@ -1,0 +1,33 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.buttons-view {
+    margin: 20px 0px 20px 0px;
+}
+
+.gifDiv {
+    margin-right: 10px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.animal {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-color: teal;
+    color: white;
+}
+
+#add-animal {
+    background-color: teal;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#animal-input {
+    width: 100%;
+    margin-top: 2px;
+}
