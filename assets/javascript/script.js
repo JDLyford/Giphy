@@ -17,7 +17,7 @@ function renderButtons() {
 $("#add-animal").on("click", function (event) {
     event.preventDefault();
     var animal = $("#animal-input").val().toLowerCase().trim();
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=20";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=10";
 
     $.ajax({
         url: queryURL,
@@ -38,7 +38,7 @@ $("#add-animal").on("click", function (event) {
 
 function displayGifs() {
     var animal = $(this).attr("data-name");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=20";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=10";
 
     $.ajax({
         url: queryURL,
