@@ -1,5 +1,5 @@
 //Institute Variables
-var animals = ["dog", "cat", "rabbit", "hamster", "skunk", "goldfish", "bird", "ferret", "turtle", "sugar glider", "chinchilla", "hedgehog", "hermit crab", "gerbil", "pygmy goat", "chicken", "capybara", "teacup pig", "serval", "salamander", "frog"];
+var animals = ["dog", "cat", "rabbit", "hamster", "skunk", "goldfish", "bird", "ferret", "chipmunk", "sugar glider", "chinchilla", "bunny", "kangaroo", "seal", "fennec", "meerkat", "capybara", "panda", "serval", "penguin", "koala"];
 
 //Functions
 
@@ -17,12 +17,12 @@ function renderButtons() {
 $("#add-animal").on("click", function (event) {
     event.preventDefault();
     var animal = $("#animal-input").val().toLowerCase().trim();
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=20";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=10";
 
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).done(function (response) {
+    }).then(function (response) {
 
         if (response.data.length == 0) {
             alert("No Gifs found for animal");
@@ -38,12 +38,12 @@ $("#add-animal").on("click", function (event) {
 
 function displayGifs() {
     var animal = $(this).attr("data-name");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=20";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=10";
 
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).done(function (response) {
+    }).then(function (response) {
 
         console.log(response);
 
